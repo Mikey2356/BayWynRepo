@@ -5,3 +5,17 @@ H:\University Work\Software Engineering\2Assignments\Assignment 2\Program\BayWyn
 H:\University Work\Software Engineering\2Assignments\Assignment 2\Program\BayWynCouriersPrototype\BayWynCouriersWCF\obj\Debug\BayWynCouriersWCF.csproj.CoreCompileInputs.cache
 H:\University Work\Software Engineering\2Assignments\Assignment 2\Program\BayWynCouriersPrototype\BayWynCouriersWCF\obj\Debug\BayWynCouriersWCF.dll
 H:\University Work\Software Engineering\2Assignments\Assignment 2\Program\BayWynCouriersPrototype\BayWynCouriersWCF\obj\Debug\BayWynCouriersWCF.pdb
+D:\University Work\Software Engineering\2Assignments\Assignment 2\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersWCF\bin\BayWynCouriersWCF.dll.config
+D:\University Work\Software Engineering\2Assignments\Assignment 2\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersWCF\bin\BayWynCouriersWCF.dll
+D:\University Work\Software Engineering\2Assignments\Assignment 2\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersWCF\bin\BayWynCouriersWCF.pdb
+D:\University Work\Software Engineering\2Assignments\Assignment 2\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersWCF\obj\Debug\BayWynCouriersWCF.csproj.AssemblyReference.cache
+D:\University Work\Software Engineering\2Assignments\Assignment 2\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersWCF\obj\Debug\BayWynCouriersWCF.csproj.CoreCompileInputs.cache
+D:\University Work\Software Engineering\2Assignments\Assignment 2\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersWCF\obj\Debug\BayWynCouriersWCF.dll
+D:\University Work\Software Engineering\2Assignments\Assignment 2\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersWCF\obj\Debug\BayWynCouriersWCF.pdb
+H:\University Work\Software Engineering\2Assignments\Assignment 2\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersWCF\bin\BayWynCouriersWCF.dll.config
+H:\University Work\Software Engineering\2Assignments\Assignment 2\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersWCF\bin\BayWynCouriersWCF.dll
+H:\University Work\Software Engineering\2Assignments\Assignment 2\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersWCF\bin\BayWynCouriersWCF.pdb
+H:\University Work\Software Engineering\2Assignments\Assignment 2\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersWCF\obj\Debug\BayWynCouriersWCF.csproj.AssemblyReference.cache
+H:\University Work\Software Engineering\2Assignments\Assignment 2\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersWCF\obj\Debug\BayWynCouriersWCF.csproj.CoreCompileInputs.cache
+H:\University Work\Software Engineering\2Assignments\Assignment 2\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersWCF\obj\Debug\BayWynCouriersWCF.dll
+H:\University Work\Software Engineering\2Assignments\Assignment 2\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersWCF\obj\Debug\BayWynCouriersWCF.pdb

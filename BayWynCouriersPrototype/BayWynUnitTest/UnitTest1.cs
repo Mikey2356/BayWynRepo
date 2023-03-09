@@ -15,5 +15,25 @@ namespace BayWynUnitTest
 
             Assert.IsNotNull(newService);
         }
+
+        [TestMethod]
+        public void Constructor_NormalData_LoginPressed()
+        {
+            BayWynCouriersPrototype.FrmLogin newLog;
+
+            newLog = new BayWynCouriersPrototype.FrmLogin();
+
+            Assert.IsNotNull(newLog);
+        }
+
+        [TestMethod]
+        public void Constructor_NormalData_AccessGranted()
+        {
+            BayWynCouriersPrototype.FrmDash newDash;
+
+            newDash = new BayWynCouriersPrototype.FrmDash();
+
+            Assert.IsNotNull(newDash);
+        }
     }
 }

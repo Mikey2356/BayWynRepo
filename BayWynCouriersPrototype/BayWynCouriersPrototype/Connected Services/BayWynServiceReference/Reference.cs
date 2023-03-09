@@ -16,10 +16,10 @@ namespace BayWynCouriersPrototype.BayWynServiceReference {
     public interface IBayWynService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBayWynService/CheckLogin", ReplyAction="http://tempuri.org/IBayWynService/CheckLoginResponse")]
-        bool CheckLogin(string username, string password);
+        int CheckLogin(string username, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBayWynService/CheckLogin", ReplyAction="http://tempuri.org/IBayWynService/CheckLoginResponse")]
-        System.Threading.Tasks.Task<bool> CheckLoginAsync(string username, string password);
+        System.Threading.Tasks.Task<int> CheckLoginAsync(string username, string password);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -49,11 +49,11 @@ namespace BayWynCouriersPrototype.BayWynServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public bool CheckLogin(string username, string password) {
+        public int CheckLogin(string username, string password) {
             return base.Channel.CheckLogin(username, password);
         }
         
-        public System.Threading.Tasks.Task<bool> CheckLoginAsync(string username, string password) {
+        public System.Threading.Tasks.Task<int> CheckLoginAsync(string username, string password) {
             return base.Channel.CheckLoginAsync(username, password);
         }
     }

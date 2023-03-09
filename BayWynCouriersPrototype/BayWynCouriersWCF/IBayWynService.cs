@@ -12,6 +12,6 @@ namespace BayWynCouriersWCF
     public interface IBayWynService
     {
         [OperationContract]
-        bool CheckLogin(string username, string password);
+        int CheckLogin(string username, string password);
     }
 }
