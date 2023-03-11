@@ -1,5 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Windows.Forms;
+using BayWynCouriersPrototype;
 
 namespace BayWynUnitTest
 {
@@ -7,21 +9,32 @@ namespace BayWynUnitTest
     public class UnitTest1
     {
         [TestMethod]
-        public void Constructor_NormalData_UsernameProvided()
+        public void Constructor_MissingUsernamePassword_UserError()
         {
-            BayWynCouriersWCF.BayWynService newService;
+            // Arrange
+            FrmLogin loginFrm = new FrmLogin("", "");
+ 
+            bool testResult;
 
-            newService = new BayWynCouriersWCF.BayWynService();
+            if(loginFrm.username == "" || loginFrm.password == "")
+            {
+                testResult = false;
+            }
+            else
+            {
+                testResult = true;
+            }
 
-            Assert.IsNotNull(newService);
+            // Assert
+            Assert.IsFalse(testResult);
         }
 
         [TestMethod]
         public void Constructor_NormalData_LoginPressed()
         {
-            BayWynCouriersPrototype.FrmLogin newLog;
+            FrmLogin newLog;
 
-            newLog = new BayWynCouriersPrototype.FrmLogin();
+            newLog = new FrmLogin();
 
             Assert.IsNotNull(newLog);
         }
@@ -29,9 +42,9 @@ namespace BayWynUnitTest
         [TestMethod]
         public void Constructor_NormalData_AccessGranted()
         {
-            BayWynCouriersPrototype.FrmDash newDash;
+            FrmDash newDash;
 
-            newDash = new BayWynCouriersPrototype.FrmDash();
+            newDash = new FrmDash();
 
             Assert.IsNotNull(newDash);
         }

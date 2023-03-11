@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,6 +49,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
@@ -48,29 +64,84 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Contracts.cs" />
+    <Compile Include="DashFrms\FrmCancelDelivery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashFrms\FrmCancelDelivery.Designer.cs">
+      <DependentUpon>FrmCancelDelivery.cs</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\BayWynServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="FrmDash.cs">
+    <Compile Include="DashFrms\FrmAcceptDeliveries.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDash.Designer.cs">
+    <Compile Include="DashFrms\FrmAcceptDeliveries.Designer.cs">
+      <DependentUpon>FrmAcceptDeliveries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashFrms\FrmChangeDelivery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashFrms\FrmChangeDelivery.Designer.cs">
+      <DependentUpon>FrmChangeDelivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashFrms\FrmCreateContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashFrms\FrmCreateContract.Designer.cs">
+      <DependentUpon>FrmCreateContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartingFrms\FrmDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartingFrms\FrmDash.Designer.cs">
       <DependentUpon>FrmDash.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmLogin.cs">
+    <Compile Include="StartingFrms\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmLogin.Designer.cs">
+    <Compile Include="StartingFrms\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashFrms\FrmSetDeliveryTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashFrms\FrmSetDeliveryTime.Designer.cs">
+      <DependentUpon>FrmSetDeliveryTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashFrms\FrmViewEditContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashFrms\FrmViewEditContract.Designer.cs">
+      <DependentUpon>FrmViewEditContract.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmDash.resx">
+    <Compile Include="DashFrms\FrmSetBreakTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashFrms\FrmSetBreakTime.Designer.cs">
+      <DependentUpon>FrmSetBreakTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashFrms\FrmViewReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashFrms\FrmViewReports.Designer.cs">
+      <DependentUpon>FrmViewReports.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DashFrms\FrmCreateContract.resx">
+      <DependentUpon>FrmCreateContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashFrms\FrmViewEditContract.resx">
+      <DependentUpon>FrmViewEditContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartingFrms\FrmDash.resx">
       <DependentUpon>FrmDash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmLogin.resx">
+    <EmbeddedResource Include="StartingFrms\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -122,6 +193,27 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BayWynDatabase.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BayWynDatabase_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>BayWynDatabase.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

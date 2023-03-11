@@ -12,28 +12,39 @@ namespace BayWynCouriersWCF
     // NOTE: In order to launch WCF Test Client for testing this service, please select BayWynService.svc or BayWynService.svc.cs at the Solution Explorer and start debugging.
     public class BayWynService : IBayWynService
     {
+        /// <summary>
+        /// This method will be called once the service reference is called from the form.
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         public int CheckLogin(string username, string password)
         {
             // This int array will be used to decalre what level of access will be provided.
             // If the int remains 0, access will be denied.
-            // 1 = Admin Access
-            // 2 = Logistics Coordinator Access
-            // 3 = Courier Access
             int checker = 0;
 
             switch(username + password)
             {
-                case "BayAdmin" + "Passw0rd":
+                // 1 = Owner Access
+                case "BayOwner" + "Pass":
                     checker = 1;
-                break;
+                    break;
 
-                case "BayCoord" + "Coordinator123":
+                // 2 = Admin Access
+                case "BayAdmin" + "Passw0rd":
                     checker = 2;
-                break;
+                    break;
 
-                case "Courier1" + "Cor123":
+                // 3 = Logistics Coordinator Access
+                case "BayCoord" + "Coordinator123":
                     checker = 3;
-                break;
+                    break;
+
+                // 4 = Courier Access
+                case "Courier1" + "Cor123":
+                    checker = 4;
+                    break;
             }
 
             return checker;
