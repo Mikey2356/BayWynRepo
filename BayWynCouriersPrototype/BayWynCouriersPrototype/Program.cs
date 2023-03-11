@@ -14,9 +14,13 @@ namespace BayWynCouriersPrototype
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
+            FrmLogin loginfrm = new FrmLogin();
+            loginfrm.Show();
+            Application.Run();
+
+            /*Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmLogin());
+            Application.Run(new FrmLogin());*/
         }
     }
 }
