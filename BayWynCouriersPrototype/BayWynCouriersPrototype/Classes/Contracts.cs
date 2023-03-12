@@ -9,10 +9,12 @@ using System.Configuration;
 using System.Collections;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Security.Cryptography.X509Certificates;
+using System.Security.Permissions;
 
 namespace BayWynCouriersPrototype
 {
-    internal class Contracts
+    public class Contracts
     {
         // Declare all variables inputted into the form.
         public int m_contractID;
@@ -21,6 +23,8 @@ namespace BayWynCouriersPrototype
         public string m_add2;
         public string m_phoneNo;
         public string m_email;
+        public decimal m_price;
+        public string m_nonContract;
         public string m_notes;
 
         // Get and set all the variables.
@@ -54,6 +58,16 @@ namespace BayWynCouriersPrototype
             get { return m_email; }
             set { m_email = value; }
         }
+        public decimal price
+        {
+            get { return m_price; }
+            set { m_price = value; }
+        }
+        public string nonContract
+        {
+            get { return m_nonContract; }
+            set { m_nonContract = value; }
+        }
         public string notes
         {
             get { return m_notes; }
@@ -81,8 +95,8 @@ namespace BayWynCouriersPrototype
 
             cmCon.CommandType = CommandType.Text;
 
-            cmCon.CommandText = "INSERT INTO ClientContracts(BusinessName, Address1, Address2, PhoneNo, Email, Notes)" + 
-                                "Values ('" + m_businessName + "','" + m_add1 + "','" + m_add2 + "','" + m_phoneNo + "','" + m_email + "','" + m_notes + "')";
+            cmCon.CommandText = "INSERT INTO ClientContracts(BusinessName, Address1, Address2, PhoneNo, Email, Notes, Price, IsNonContract)" + 
+                                "Values ('" + m_businessName + "','" + m_add1 + "','" + m_add2 + "','" + m_phoneNo + "','" + m_email + "','" + m_notes + "','" + m_price + "','" + m_nonContract + "');";
             try
             {
                 cmCon.ExecuteNonQuery();

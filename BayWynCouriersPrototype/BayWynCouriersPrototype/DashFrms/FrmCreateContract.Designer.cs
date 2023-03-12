@@ -44,6 +44,11 @@
             this.btnCreateCon = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.txtConID = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.checkNonContract = new System.Windows.Forms.CheckBox();
+            this.btnUpdatePrice = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtBisName
@@ -168,7 +173,7 @@
             // btnCreateCon
             // 
             this.btnCreateCon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateCon.Location = new System.Drawing.Point(475, 305);
+            this.btnCreateCon.Location = new System.Drawing.Point(480, 318);
             this.btnCreateCon.Name = "btnCreateCon";
             this.btnCreateCon.Size = new System.Drawing.Size(143, 34);
             this.btnCreateCon.TabIndex = 13;
@@ -194,12 +199,68 @@
             this.txtConID.Size = new System.Drawing.Size(100, 20);
             this.txtConID.TabIndex = 15;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(445, 268);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(126, 20);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Contract Price: £";
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.Location = new System.Drawing.Point(567, 268);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(44, 20);
+            this.lblPrice.TabIndex = 17;
+            this.lblPrice.Text = "0.00";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(445, 174);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(120, 20);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Is non-contract:";
+            // 
+            // checkNonContract
+            // 
+            this.checkNonContract.AutoSize = true;
+            this.checkNonContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkNonContract.Location = new System.Drawing.Point(571, 178);
+            this.checkNonContract.Name = "checkNonContract";
+            this.checkNonContract.Size = new System.Drawing.Size(15, 14);
+            this.checkNonContract.TabIndex = 19;
+            this.checkNonContract.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdatePrice
+            // 
+            this.btnUpdatePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdatePrice.Location = new System.Drawing.Point(480, 204);
+            this.btnUpdatePrice.Name = "btnUpdatePrice";
+            this.btnUpdatePrice.Size = new System.Drawing.Size(143, 34);
+            this.btnUpdatePrice.TabIndex = 20;
+            this.btnUpdatePrice.Text = "Update Price";
+            this.btnUpdatePrice.UseVisualStyleBackColor = true;
+            this.btnUpdatePrice.Click += new System.EventHandler(this.btnUpdatePrice_Click);
+            // 
             // FrmCreateContract
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(664, 395);
+            this.Controls.Add(this.btnUpdatePrice);
+            this.Controls.Add(this.checkNonContract);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lblPrice);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.txtConID);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnCreateCon);
@@ -241,5 +302,10 @@
         private System.Windows.Forms.Button btnCreateCon;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtConID;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.CheckBox checkNonContract;
+        private System.Windows.Forms.Button btnUpdatePrice;
     }
 }

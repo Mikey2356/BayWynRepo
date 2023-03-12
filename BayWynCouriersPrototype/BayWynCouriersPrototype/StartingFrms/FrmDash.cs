@@ -113,5 +113,11 @@ namespace BayWynCouriersPrototype
             FrmViewCouriers frmBreakTime = new FrmViewCouriers();
             frmBreakTime.Show();
         }
+
+        private void btnViewRep_Click(object sender, EventArgs e)
+        {
+            FrmViewReports frmReport = new FrmViewReports();
+            frmReport.Show();
+        }
     }
 }

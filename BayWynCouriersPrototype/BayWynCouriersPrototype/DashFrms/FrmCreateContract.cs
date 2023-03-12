@@ -15,6 +15,9 @@ namespace BayWynCouriersPrototype
 {
     public partial class FrmCreateContract : Form
     {
+        public string isNonContract;
+        public decimal totalPrice = 0;
+
         public FrmCreateContract()
         {
             InitializeComponent();
@@ -36,10 +39,36 @@ namespace BayWynCouriersPrototype
                 objCon.phoneNo = txtPhoneNo.Text;
                 objCon.email = txtEmail.Text;
                 objCon.notes = txtNotes.Text;
+                objCon.price = totalPrice;
+                objCon.nonContract = isNonContract;
 
                 objCon.AddNewContract();
 
                 txtConID.Text = objCon.contractID.ToString();
+            }
+        }
+
+        private void btnUpdatePrice_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(checkNonContract.Checked == true)
+                {
+                    lblPrice.Text = "10.00";
+                    totalPrice = 10;
+                    isNonContract = "Yes";
+                }
+                else if (checkNonContract.Checked == false)
+                {
+                    lblPrice.Text = "50.00";
+                    totalPrice = 50;
+                    isNonContract = "No";
+                }
+                
+            }
+            catch
+            {
+
             }
         }
     }

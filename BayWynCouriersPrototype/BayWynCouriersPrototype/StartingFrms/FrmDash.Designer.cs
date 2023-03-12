@@ -112,6 +112,7 @@
             this.btnViewRep.TabIndex = 6;
             this.btnViewRep.Text = "View Reports";
             this.btnViewRep.UseVisualStyleBackColor = true;
+            this.btnViewRep.Click += new System.EventHandler(this.btnViewRep_Click);
             // 
             // btnSetBreak
             // 
