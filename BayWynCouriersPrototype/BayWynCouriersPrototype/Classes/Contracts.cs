@@ -89,7 +89,7 @@ namespace BayWynCouriersPrototype
             }
             catch
             {
-                MessageBox.Show("Invalid characters detected.\nPlease avoid using characters such as: '?!&*#;:", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid character detected.\nPlease avoid using: ' ", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
 
@@ -167,6 +167,42 @@ namespace BayWynCouriersPrototype
             MessageBox.Show("Contract Deleted", "Deletion Successful", MessageBoxButtons.OK);
 
             cmCon.ExecuteNonQuery();
+
+            cnCon.Close();
+        }
+
+        public void EditContract()
+        {
+            string ContractCon = ConfigurationManager.ConnectionStrings["BayWynStrings"].ConnectionString;
+
+            SqlConnection cnCon = new SqlConnection(ContractCon);
+
+            try
+            {
+                cnCon.Open();
+            }
+            catch
+            {
+                MessageBox.Show("Could not connect to the database, please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            SqlCommand cmCon = new SqlCommand();
+
+            cmCon.Connection = cnCon;
+
+            cmCon.CommandType = CommandType.Text;
+
+            cmCon.CommandText = "UPDATE ClientContracts " + 
+                                "SET BusinessName = '" + m_businessName + "', Address1 = '" + m_add1 + "', Address2 = '" + m_add2 + "', PhoneNo = '" + m_phoneNo + "', Email = '" + m_email + "', Notes = '" + m_notes + "'" +
+                                "WHERE ContractId = '" + m_contractID + "';";
+            try
+            {
+                cmCon.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             cnCon.Close();
         }

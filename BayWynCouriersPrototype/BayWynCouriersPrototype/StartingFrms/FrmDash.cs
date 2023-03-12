@@ -19,8 +19,6 @@ namespace BayWynCouriersPrototype
 
         public void FrmDash_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(FrmLogin.lvlAccess.ToString());
-
             switch(FrmLogin.lvlAccess)
             {
                 // Owner
@@ -90,6 +88,30 @@ namespace BayWynCouriersPrototype
         {
             FrmViewEditContract frmViewCon = new FrmViewEditContract();
             frmViewCon.Show();
+        }
+
+        private void btnSetDelTIme_Click(object sender, EventArgs e)
+        {
+            FrmSetDeliveryTime frmSetTime = new FrmSetDeliveryTime();
+            frmSetTime.Show();
+        }
+
+        private void btnAcceptDel_Click(object sender, EventArgs e)
+        {
+            FrmAcceptDeliveries frmAcceptDel = new FrmAcceptDeliveries();
+            frmAcceptDel.Show();
+        }
+
+        private void btnCanDel_Click(object sender, EventArgs e)
+        {
+            FrmCancelDelivery frmCancelDel = new FrmCancelDelivery();
+            frmCancelDel.Show();
+        }
+
+        private void btnSetBreak_Click(object sender, EventArgs e)
+        {
+            FrmSetBreakTime frmBreakTime = new FrmSetBreakTime();
+            frmBreakTime.Show();
         }
     }
 }

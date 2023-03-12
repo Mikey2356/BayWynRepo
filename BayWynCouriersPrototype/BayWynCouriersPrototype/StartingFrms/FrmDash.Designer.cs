@@ -80,6 +80,7 @@
             this.btnSetDelTIme.TabIndex = 3;
             this.btnSetDelTIme.Text = "Set Delivery Time";
             this.btnSetDelTIme.UseVisualStyleBackColor = true;
+            this.btnSetDelTIme.Click += new System.EventHandler(this.btnSetDelTIme_Click);
             // 
             // btnChangeDel
             // 
@@ -100,6 +101,7 @@
             this.btnAcceptDel.TabIndex = 5;
             this.btnAcceptDel.Text = "Accept Deliveries";
             this.btnAcceptDel.UseVisualStyleBackColor = true;
+            this.btnAcceptDel.Click += new System.EventHandler(this.btnAcceptDel_Click);
             // 
             // btnViewRep
             // 
@@ -120,6 +122,7 @@
             this.btnSetBreak.TabIndex = 7;
             this.btnSetBreak.Text = "Set Break Time";
             this.btnSetBreak.UseVisualStyleBackColor = true;
+            this.btnSetBreak.Click += new System.EventHandler(this.btnSetBreak_Click);
             // 
             // btnCanDel
             // 
@@ -130,6 +133,7 @@
             this.btnCanDel.TabIndex = 8;
             this.btnCanDel.Text = "Cancel Delivery";
             this.btnCanDel.UseVisualStyleBackColor = true;
+            this.btnCanDel.Click += new System.EventHandler(this.btnCanDel_Click);
             // 
             // FrmDash
             // 
