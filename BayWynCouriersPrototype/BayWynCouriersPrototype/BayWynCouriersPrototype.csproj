@@ -122,11 +122,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DashFrms\FrmSetBreakTime.cs">
+    <Compile Include="DashFrms\FrmViewCouriers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DashFrms\FrmSetBreakTime.Designer.cs">
-      <DependentUpon>FrmSetBreakTime.cs</DependentUpon>
+    <Compile Include="DashFrms\FrmViewCouriers.Designer.cs">
+      <DependentUpon>FrmViewCouriers.cs</DependentUpon>
     </Compile>
     <Compile Include="DashFrms\FrmViewReports.cs">
       <SubType>Form</SubType>
@@ -143,8 +143,8 @@
     <EmbeddedResource Include="DashFrms\FrmCreateContract.resx">
       <DependentUpon>FrmCreateContract.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DashFrms\FrmSetBreakTime.resx">
-      <DependentUpon>FrmSetBreakTime.cs</DependentUpon>
+    <EmbeddedResource Include="DashFrms\FrmViewCouriers.resx">
+      <DependentUpon>FrmViewCouriers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashFrms\FrmSetDeliveryTime.resx">
       <DependentUpon>FrmSetDeliveryTime.cs</DependentUpon>

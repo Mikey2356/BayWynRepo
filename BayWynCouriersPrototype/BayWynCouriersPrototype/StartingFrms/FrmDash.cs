@@ -110,7 +110,7 @@ namespace BayWynCouriersPrototype
 
         private void btnSetBreak_Click(object sender, EventArgs e)
         {
-            FrmSetBreakTime frmBreakTime = new FrmSetBreakTime();
+            FrmViewCouriers frmBreakTime = new FrmViewCouriers();
             frmBreakTime.Show();
         }
     }
