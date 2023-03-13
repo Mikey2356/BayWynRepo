@@ -32,7 +32,6 @@
             this.btnCreateCon = new System.Windows.Forms.Button();
             this.btnViewCon = new System.Windows.Forms.Button();
             this.btnSetDelTIme = new System.Windows.Forms.Button();
-            this.btnChangeDel = new System.Windows.Forms.Button();
             this.btnAcceptDel = new System.Windows.Forms.Button();
             this.btnViewRep = new System.Windows.Forms.Button();
             this.btnSetBreak = new System.Windows.Forms.Button();
@@ -52,7 +51,7 @@
             // btnCreateCon
             // 
             this.btnCreateCon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateCon.Location = new System.Drawing.Point(74, 80);
+            this.btnCreateCon.Location = new System.Drawing.Point(85, 82);
             this.btnCreateCon.Name = "btnCreateCon";
             this.btnCreateCon.Size = new System.Drawing.Size(90, 69);
             this.btnCreateCon.TabIndex = 1;
@@ -63,7 +62,7 @@
             // btnViewCon
             // 
             this.btnViewCon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewCon.Location = new System.Drawing.Point(209, 80);
+            this.btnViewCon.Location = new System.Drawing.Point(218, 82);
             this.btnViewCon.Name = "btnViewCon";
             this.btnViewCon.Size = new System.Drawing.Size(90, 69);
             this.btnViewCon.TabIndex = 2;
@@ -74,7 +73,7 @@
             // btnSetDelTIme
             // 
             this.btnSetDelTIme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetDelTIme.Location = new System.Drawing.Point(344, 81);
+            this.btnSetDelTIme.Location = new System.Drawing.Point(351, 83);
             this.btnSetDelTIme.Name = "btnSetDelTIme";
             this.btnSetDelTIme.Size = new System.Drawing.Size(90, 69);
             this.btnSetDelTIme.TabIndex = 3;
@@ -82,20 +81,10 @@
             this.btnSetDelTIme.UseVisualStyleBackColor = true;
             this.btnSetDelTIme.Click += new System.EventHandler(this.btnSetDelTIme_Click);
             // 
-            // btnChangeDel
-            // 
-            this.btnChangeDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChangeDel.Location = new System.Drawing.Point(479, 80);
-            this.btnChangeDel.Name = "btnChangeDel";
-            this.btnChangeDel.Size = new System.Drawing.Size(90, 70);
-            this.btnChangeDel.TabIndex = 4;
-            this.btnChangeDel.Text = "Change Delivery";
-            this.btnChangeDel.UseVisualStyleBackColor = true;
-            // 
             // btnAcceptDel
             // 
             this.btnAcceptDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAcceptDel.Location = new System.Drawing.Point(614, 83);
+            this.btnAcceptDel.Location = new System.Drawing.Point(484, 85);
             this.btnAcceptDel.Name = "btnAcceptDel";
             this.btnAcceptDel.Size = new System.Drawing.Size(90, 67);
             this.btnAcceptDel.TabIndex = 5;
@@ -106,7 +95,7 @@
             // btnViewRep
             // 
             this.btnViewRep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewRep.Location = new System.Drawing.Point(344, 173);
+            this.btnViewRep.Location = new System.Drawing.Point(277, 176);
             this.btnViewRep.Name = "btnViewRep";
             this.btnViewRep.Size = new System.Drawing.Size(90, 66);
             this.btnViewRep.TabIndex = 6;
@@ -117,7 +106,7 @@
             // btnSetBreak
             // 
             this.btnSetBreak.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetBreak.Location = new System.Drawing.Point(479, 173);
+            this.btnSetBreak.Location = new System.Drawing.Point(412, 176);
             this.btnSetBreak.Name = "btnSetBreak";
             this.btnSetBreak.Size = new System.Drawing.Size(90, 66);
             this.btnSetBreak.TabIndex = 7;
@@ -128,7 +117,7 @@
             // btnCanDel
             // 
             this.btnCanDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCanDel.Location = new System.Drawing.Point(209, 173);
+            this.btnCanDel.Location = new System.Drawing.Point(617, 86);
             this.btnCanDel.Name = "btnCanDel";
             this.btnCanDel.Size = new System.Drawing.Size(90, 66);
             this.btnCanDel.TabIndex = 8;
@@ -146,7 +135,6 @@
             this.Controls.Add(this.btnSetBreak);
             this.Controls.Add(this.btnViewRep);
             this.Controls.Add(this.btnAcceptDel);
-            this.Controls.Add(this.btnChangeDel);
             this.Controls.Add(this.btnSetDelTIme);
             this.Controls.Add(this.btnViewCon);
             this.Controls.Add(this.btnCreateCon);
@@ -165,7 +153,6 @@
         private System.Windows.Forms.Button btnCreateCon;
         private System.Windows.Forms.Button btnViewCon;
         private System.Windows.Forms.Button btnSetDelTIme;
-        private System.Windows.Forms.Button btnChangeDel;
         private System.Windows.Forms.Button btnAcceptDel;
         private System.Windows.Forms.Button btnViewRep;
         private System.Windows.Forms.Button btnSetBreak;

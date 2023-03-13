@@ -17,6 +17,11 @@ namespace BayWynCouriersPrototype
             InitializeComponent();
         }
 
+        /// <summary>
+        /// This method is called upon form start.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void FrmDash_Load(object sender, EventArgs e)
         {
             switch(FrmLogin.lvlAccess)
@@ -26,7 +31,6 @@ namespace BayWynCouriersPrototype
                     // Because the owner has access to all aspects of the program, they will not have any features hidden from them.
                     btnAcceptDel.Enabled = true;
                     btnCanDel.Enabled = true;
-                    btnChangeDel.Enabled = true;
                     btnCreateCon.Enabled = true;
                     btnSetBreak.Enabled = true;
                     btnSetDelTIme.Enabled = true;
@@ -38,11 +42,7 @@ namespace BayWynCouriersPrototype
                 case 2:
                     btnSetDelTIme.Enabled = false;
                     btnCanDel.Enabled = false;
-
-                    // Obtain reports will remain available but the admin will still not be able to access specific parts of that form.
-
                     btnCanDel.Enabled = true;
-                    btnChangeDel.Enabled = true;
                     btnCreateCon.Enabled = true;
                     btnSetBreak.Enabled = true;
                     btnViewCon.Enabled = true;
@@ -53,7 +53,6 @@ namespace BayWynCouriersPrototype
                 case 3:
                     btnCreateCon.Enabled = false;
                     btnSetDelTIme.Enabled = false;
-                    btnChangeDel.Enabled = false;
                     btnAcceptDel.Enabled = false;
 
                     btnCanDel.Enabled = true;
@@ -65,7 +64,6 @@ namespace BayWynCouriersPrototype
                 // Couriers
                 case 4:
                     btnCreateCon.Enabled = false;
-                    btnChangeDel.Enabled = false;
                     btnSetDelTIme.Enabled = false;
                     btnViewCon.Enabled = false;
                     btnViewRep.Enabled = false;
@@ -77,11 +75,12 @@ namespace BayWynCouriersPrototype
             }
         }
 
+        // Depending on what button is pressed, open the respective form.
+
         private void btnCreateCon_Click(object sender, EventArgs e)
         {
             FrmCreateContract frmCon = new FrmCreateContract();
             frmCon.Show();
-            //this.Hide();
         }
 
         private void btnViewCon_Click(object sender, EventArgs e)

@@ -13,14 +13,16 @@ using System.Runtime.Remoting.Messaging;
 
 namespace BayWynCouriersPrototype.Classes
 {
-    internal class Couriers
+    public class Couriers
     {
+        // Declare new variables.
         public int m_courierID;
         public string m_firstName;
         public string m_lastName;
         public string m_breakStart;
         public string m_breakEnd;
 
+        // Get and set all varaibles sent from the form with the newly declared variables.
         public int courierID
         {
             get { return m_courierID; }
@@ -48,40 +50,60 @@ namespace BayWynCouriersPrototype.Classes
             set { m_breakEnd = value; }
         }
 
+        /// <summary>
+        /// This DataSet will be called when it's called from a form.
+        /// </summary>
+        /// <returns></returns>
         public DataSet GetCouriers()
         {
+            // Declare a new DataSet.
             DataSet dsCor = new DataSet();
 
+            // Declare a new connection string.
             string CourierCon = ConfigurationManager.ConnectionStrings["BayWynStrings"].ConnectionString;
 
+            // Declare a new SQL connection using the connection strings.
             SqlConnection cnCor = new SqlConnection(CourierCon);
 
             try
             {
+                // Attempt to establish a connection to the database.
                 cnCor.Open();
             }
             catch
             {
+                // If the connection attempt fails, return a message box.
                 MessageBox.Show("Could not connect to the database, please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+            // Set up a new SQL command.
             SqlCommand cmCor = new SqlCommand();
 
             cmCor.Connection = cnCor;
 
+            // Declare the command type.
             cmCor.CommandType = CommandType.Text;
 
+            // Send the command to the SQL database.
             cmCor.CommandText = "SELECT * FROM Couriers";
 
+            // Declare a new data adapter.
             SqlDataAdapter daCon = new SqlDataAdapter(cmCor);
 
+            // Fill the dataset using the data adapter.
             daCon.Fill(dsCor);
 
+            // Close the database connection.
             cnCor.Close();
 
+            // Return the dataset.
             return dsCor;
         }
 
+        /// <summary>
+        /// This method will be called when it's called from a form.
+        /// </summary>
+        /// <returns></returns>
         public void SetBreakTime()
         {
             string CourierCon = ConfigurationManager.ConnectionStrings["BayWynStrings"].ConnectionString;

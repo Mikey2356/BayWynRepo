@@ -38,10 +38,10 @@ namespace BayWynUnitTest
             Contracts Con = new Contracts();
 
             // Act
-            var Result = Con.GetAllContractsByContractID(1);
+            var Result = Con.GetAllContractsByContractID(int.Parse(null));
 
             // Assert
-            Assert.IsNotNull(Result);
+            Assert.IsNull(Result);
         }
 
         [TestMethod]

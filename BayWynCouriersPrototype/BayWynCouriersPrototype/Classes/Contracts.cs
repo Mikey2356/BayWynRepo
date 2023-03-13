@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Security.Cryptography.X509Certificates;
 using System.Security.Permissions;
+using System.Security.Cryptography;
 
 namespace BayWynCouriersPrototype
 {
@@ -26,6 +27,7 @@ namespace BayWynCouriersPrototype
         public decimal m_price;
         public string m_nonContract;
         public string m_notes;
+        public DateTime m_contractDate;
 
         // Get and set all the variables.
         public int contractID
@@ -73,56 +75,82 @@ namespace BayWynCouriersPrototype
             get { return m_notes; }
             set { m_notes = value; }
         }
+        public DateTime contractDate
+        {
+            get { return m_contractDate; }
+            set { m_contractDate = value; }
+        }
 
+        /// <summary>
+        /// This method will be called when it's called from a form.
+        /// </summary>
+        /// <returns></returns>
         public void AddNewContract()
         {
+            // Declare a new connection string.
             string ContractCon = ConfigurationManager.ConnectionStrings["BayWynStrings"].ConnectionString;
 
+            // Declare a new SQL connection using the connection strings.
             SqlConnection cnCon = new SqlConnection(ContractCon);
 
             try
             {
+                // Attempt to establish a connection to the database.
                 cnCon.Open();
             }
             catch
             {
+                // If the connection attempt fails, return a message box.
                 MessageBox.Show("Could not connect to the database, please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+            // Set up a new SQL command.
             SqlCommand cmCon = new SqlCommand();
 
             cmCon.Connection = cnCon;
 
+            // Declare the command type.
             cmCon.CommandType = CommandType.Text;
 
-            cmCon.CommandText = "INSERT INTO ClientContracts(BusinessName, Address1, Address2, PhoneNo, Email, Notes, Price, IsNonContract)" + 
-                                "Values ('" + m_businessName + "','" + m_add1 + "','" + m_add2 + "','" + m_phoneNo + "','" + m_email + "','" + m_notes + "','" + m_price + "','" + m_nonContract + "');";
+            // Send the command to the SQL database.
+            cmCon.CommandText = "INSERT INTO ClientContracts(BusinessName, Address1, Address2, PhoneNo, Email, Notes, Price, IsNonContract, ContractDate)" + 
+                                "Values ('" + m_businessName + "','" + m_add1 + "','" + m_add2 + "','" + m_phoneNo + "','" + m_email + "','" + m_notes + "','" + m_price + "','" + m_nonContract + "','" + m_contractDate + "');";
             try
             {
+                // Execute the database query.
                 cmCon.ExecuteNonQuery();
             }
             catch
             {
+                // If it detects an invalid character, send an error message.
                 MessageBox.Show("Invalid character detected.\nPlease avoid using: ' ", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
-
+            // Select all ContractIds from the table.
             cmCon.CommandText = "Select MAX(ContractId) FROM ClientContracts";
 
             try
             {
+                // store the int taken from the database.
                 m_contractID = (int)cmCon.ExecuteScalar();
             }
             catch
             {
+                // If an ID couldn't be generated 
                 MessageBox.Show("Could generate an ID for the contract. Please try again.", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+            // Close the database connection.
             cnCon.Close();
         }
 
+        /// <summary>
+        /// This DataSet will be called when it's called from a form.
+        /// </summary>
+        /// <returns></returns>
         public DataSet GetAllContractsByContractID(int ConID)
         {
+            // Declare a new DataSet
             DataSet dsCon = new DataSet();
 
             string ContractCon = ConfigurationManager.ConnectionStrings["BayWynStrings"].ConnectionString;
@@ -146,15 +174,23 @@ namespace BayWynCouriersPrototype
 
             cmCon.CommandText = "SELECT * FROM ClientContracts where ContractId = '" + ConID + "'";
 
+            // Declare a new data adapter
             SqlDataAdapter daCon = new SqlDataAdapter(cmCon);
 
+            // Fill the DataSet using the data adapter.
             daCon.Fill(dsCon);
 
+            // Close the connection.
             cnCon.Close();
 
+            // Return the dataset.
             return dsCon;
         }
 
+        /// <summary>
+        /// This method will be called when it's called from a form.
+        /// </summary>
+        /// <returns></returns>
         public void DeleteContract()
         {
             string ContractCon = ConfigurationManager.ConnectionStrings["BayWynStrings"].ConnectionString;
@@ -185,6 +221,10 @@ namespace BayWynCouriersPrototype
             cnCon.Close();
         }
 
+        /// <summary>
+        /// This method will be called when it's called from a form.
+        /// </summary>
+        /// <returns></returns>
         public void EditContract()
         {
             string ContractCon = ConfigurationManager.ConnectionStrings["BayWynStrings"].ConnectionString;

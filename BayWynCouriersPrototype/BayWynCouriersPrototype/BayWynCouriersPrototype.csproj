@@ -65,8 +65,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Contracts.cs" />
-    <Compile Include="Classes\Deliveries.cs" />
+    <Compile Include="Classes\Assignments.cs" />
     <Compile Include="Classes\Couriers.cs" />
+    <Compile Include="Classes\Reports.cs" />
     <Compile Include="DashFrms\FrmCancelDelivery.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,12 +84,6 @@
     </Compile>
     <Compile Include="DashFrms\FrmAcceptDeliveries.Designer.cs">
       <DependentUpon>FrmAcceptDeliveries.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DashFrms\FrmChangeDelivery.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DashFrms\FrmChangeDelivery.Designer.cs">
-      <DependentUpon>FrmChangeDelivery.cs</DependentUpon>
     </Compile>
     <Compile Include="DashFrms\FrmCreateContract.cs">
       <SubType>Form</SubType>
@@ -151,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DashFrms\FrmViewEditContract.resx">
       <DependentUpon>FrmViewEditContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashFrms\FrmViewReports.resx">
+      <DependentUpon>FrmViewReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StartingFrms\FrmDash.resx">
       <DependentUpon>FrmDash.cs</DependentUpon>

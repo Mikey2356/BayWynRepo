@@ -49,6 +49,8 @@ namespace BayWynCouriersPrototype
         {
             try
             {
+                // Call method and send login details to it.
+                // Method is called for unit testing.
                 LoginSend(username, password);
             }
             catch
@@ -84,11 +86,13 @@ namespace BayWynCouriersPrototype
             }
         }
 
+        // declare new username and password variables to use in unit testing.
         public FrmLogin(String username, String password)
         {
             m_username = username;
             m_password = password;
         }
+
         //get and return the usernames for the unit test.
         public string username
         {
