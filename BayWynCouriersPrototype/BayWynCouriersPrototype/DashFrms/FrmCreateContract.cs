@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using System.Data.SqlClient;
-
+using System.Text.RegularExpressions;
 
 namespace BayWynCouriersPrototype
 {
@@ -17,12 +17,26 @@ namespace BayWynCouriersPrototype
     {
         // Declare new variables to be sent off to the class.
         public string isNonContract;
-        public decimal totalPrice = 50;
+        public decimal totalPrice;
         public DateTime conDate;
 
         public FrmCreateContract()
         {
             InitializeComponent();
+        }
+
+        private void FrmCreateContract_Load(object sender, EventArgs e)
+        {
+            // If either an administrator or logistics coordinator opens this form.
+            if (FrmLogin.lvlAccess == 2 || FrmLogin.lvlAccess == 3)
+            {
+                // Restrict their access to only be able to make non-contracted listsings.
+                checkNonContract.Checked = true;
+                checkNonContract.Enabled = false;
+
+                totalPrice = 10;
+                lblPrice.Text = "10.00";
+            }
         }
 
         /// <summary>
@@ -32,11 +46,17 @@ namespace BayWynCouriersPrototype
         /// <param name="e"></param>
         private void btnCreateCon_Click(object sender, EventArgs e)
         {
+            Regex regx = new Regex("^[0-9]*$");
+
             // Check if any of the text boxes are null.
             if(txtBisName == null || txtAdd1 == null || txtAdd2 == null || txtPhoneNo == null || txtEmail == null) 
             { 
                 // If they are, return a message box.
                MessageBox.Show("Please fill out all required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if(regx.IsMatch(txtPhoneNo.Text))
+            {
+                MessageBox.Show("Please use only numbers in the phone number field.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -45,6 +65,20 @@ namespace BayWynCouriersPrototype
 
                 // Fill the DateTime variable with the current system time.
                 conDate = DateTime.Now;
+
+                if (checkNonContract.Checked == true)
+                {
+                    // Set the new price.
+                    totalPrice = 10;
+                    isNonContract = "Yes";
+                }
+                // If it isn't ticked.
+                else if (checkNonContract.Checked == false)
+                {
+                    // Set the original price.
+                    totalPrice = 50;
+                    isNonContract = "No";
+                }
 
                 // Send all fields off to the contracts class.
                 objCon.businessName = txtBisName.Text;

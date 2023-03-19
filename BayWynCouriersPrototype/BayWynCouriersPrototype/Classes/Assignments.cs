@@ -77,14 +77,21 @@ namespace BayWynCouriersPrototype.Classes
             cmDel.Connection = cnDel;
 
             // Declare an SQL parameter, this will take the DateTime sent from the form and format it into SQL DateTime for more consistent usage.
-            cmDel.Parameters.Add("@delDate", SqlDbType.DateTime).Value = m_deliveryDate;
+            // cmDel.Parameters.Add("@delDate", SqlDbType.DateTime).Value = m_deliveryDate;
 
             // Declare the command type.
             cmDel.CommandType = CommandType.Text;
 
+            /*  See testing document for further context.
+                Sending m_deliveryDate as a parsed DateTime does not work:
+                "SET DeliveryDate ='" + m_deliveryDate < - Set to GB format by default.
+                Parsing and formating DateTime in this class does not work:
+                DateTime.Parse(m_deliveryDate.ToString("dd/MM/yyyy")) < - GB format tested.
+                DateTime.Parse(m_deliveryDate.ToString("MM/dd/yyyy")) < - US format tested. */
+            
             // Send the command to the SQL database.
             cmDel.CommandText = "UPDATE Deliveries " +
-                                "SET DeliveryDate ='@delDate'" +//, DeliveryTime = '" + m_deliveryTime + "'" +
+                                "SET DeliveryDate ='" + m_deliveryDate + "'," + "DeliveryTime = '" + m_deliveryTime + "'" +
                                 "WHERE DeliveryId = '" + m_deliveryID + "';";
 
             try

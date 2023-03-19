@@ -279,6 +279,7 @@
             this.Controls.Add(this.txtBisName);
             this.Name = "FrmCreateContract";
             this.Text = "FrmCreateContract";
+            this.Load += new System.EventHandler(this.FrmCreateContract_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

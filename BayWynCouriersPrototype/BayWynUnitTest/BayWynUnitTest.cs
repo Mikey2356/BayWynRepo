@@ -2,7 +2,10 @@
 using System;
 using System.Windows.Forms;
 using System.Data;
+using System.Data.SqlClient;
+using System.Collections;
 using BayWynCouriersPrototype;
+using System.Configuration;
 
 namespace BayWynUnitTest
 {
@@ -38,10 +41,16 @@ namespace BayWynUnitTest
             Contracts Con = new Contracts();
 
             // Act
-            var Result = Con.GetAllContractsByContractID(int.Parse(null));
+            string ContractCon = ConfigurationManager.ConnectionStrings["BayWynStrings"].ConnectionString;
+
+            SqlConnection cnCon = new SqlConnection(ContractCon);
+
+            cnCon.Open();
+
+            var Result = Con.GetAllContractsByContractID(1);
 
             // Assert
-            Assert.IsNull(Result);
+            Assert.IsNotNull(Result);
         }
 
         [TestMethod]

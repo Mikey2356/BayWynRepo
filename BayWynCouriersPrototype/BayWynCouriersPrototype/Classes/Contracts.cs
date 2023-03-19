@@ -112,18 +112,20 @@ namespace BayWynCouriersPrototype
             // Declare the command type.
             cmCon.CommandType = CommandType.Text;
 
+            // Due to the DateTime conversions being rejected by the SQL database (refer to comments in Assignments class & testing document for further context),
+            // the date in this SQL command is set to a fixed, unchanging date.
             // Send the command to the SQL database.
             cmCon.CommandText = "INSERT INTO ClientContracts(BusinessName, Address1, Address2, PhoneNo, Email, Notes, Price, IsNonContract, ContractDate)" + 
-                                "Values ('" + m_businessName + "','" + m_add1 + "','" + m_add2 + "','" + m_phoneNo + "','" + m_email + "','" + m_notes + "','" + m_price + "','" + m_nonContract + "','" + m_contractDate + "');";
+                                "Values ('" + m_businessName + "','" + m_add1 + "','" + m_add2 + "','" + m_phoneNo + "','" + m_email + "','" + m_notes + "','" + m_price + "','" + m_nonContract + "',' 12/03/2023 ');";
             try
             {
                 // Execute the database query.
                 cmCon.ExecuteNonQuery();
             }
-            catch
+            catch(Exception ex)
             {
                 // If it detects an invalid character, send an error message.
-                MessageBox.Show("Invalid character detected.\nPlease avoid using: ' ", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error Detected:\n" + ex, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
             // Select all ContractIds from the table.

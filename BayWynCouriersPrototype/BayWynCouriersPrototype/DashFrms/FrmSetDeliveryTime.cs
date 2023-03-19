@@ -29,7 +29,7 @@ namespace BayWynCouriersPrototype
         {
             // Set the DateTimePicker format to dd/mm/yyyy.
             dtpDeliveryDate.Format = DateTimePickerFormat.Custom;
-            dtpDeliveryDate.CustomFormat = "dd/MM/yyyy";
+            dtpDeliveryDate.CustomFormat = "MM/dd/yyyy";
 
             // Declare a new assignments class.
             Assignments objDeliver = new Assignments();
@@ -74,8 +74,14 @@ namespace BayWynCouriersPrototype
             }
 
             // TODO: MAKE DAYS WORK OVER 12.
+            // For futher documentation of DateTime failures (see testing document for further context):
+            // objDeliver.m_deliveryDate = DateTime.ParseExact(dtpDeliveryDate.Text, "MM/dd/yyyy", CultureInfo.InvariantCulture);
+            // objDeliver.m_deliveryDate = DateTime.Parse(dtpDeliveryDate.Text);
+            // string chosenDate = dtpDeliveryDate.Value.ToString("MM/dd/yyyy"); < - Attempting to send via US format.
+
             // Send user inputs to the class.
-            objDeliver.m_deliveryDate = DateTime.Parse(dtpDeliveryDate.Text);
+
+            MessageBox.Show(dtpDeliveryDate.Text);
             objDeliver.m_deliveryTime = cmbTime.Text;
 
             // Call the method.
@@ -93,6 +99,15 @@ namespace BayWynCouriersPrototype
             {
                 MessageBox.Show("Could not retrieve any records, please try again.", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void dtpDeliveryDate_ValueChanged(object sender, EventArgs e)
+        {
+            Assignments objDeliver = new Assignments();
+
+            string chosenDate = dtpDeliveryDate.Value.ToString("dd/MM/yyyy");
+
+            objDeliver.m_deliveryDate = DateTime.Parse(chosenDate);
         }
     }
 }

@@ -58,6 +58,7 @@
             this.dtpDeliveryDate.Name = "dtpDeliveryDate";
             this.dtpDeliveryDate.Size = new System.Drawing.Size(200, 26);
             this.dtpDeliveryDate.TabIndex = 1;
+            this.dtpDeliveryDate.ValueChanged += new System.EventHandler(this.dtpDeliveryDate_ValueChanged);
             // 
             // dataGridViewDel
             // 
