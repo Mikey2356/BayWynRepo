@@ -41,17 +41,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(324, 9);
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(307, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 37);
+            this.label1.Size = new System.Drawing.Size(232, 42);
             this.label1.TabIndex = 0;
             this.label1.Text = "View Reports";
             // 
             // dataGridViewRep
             // 
             this.dataGridViewRep.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewRep.Location = new System.Drawing.Point(12, 130);
+            this.dataGridViewRep.Location = new System.Drawing.Point(12, 162);
             this.dataGridViewRep.Name = "dataGridViewRep";
             this.dataGridViewRep.Size = new System.Drawing.Size(776, 351);
             this.dataGridViewRep.TabIndex = 1;
@@ -59,60 +60,60 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 97);
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(8, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 20);
+            this.label2.Size = new System.Drawing.Size(51, 21);
             this.label2.TabIndex = 2;
             this.label2.Text = "View:";
             // 
             // cmbView
             // 
-            this.cmbView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbView.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbView.FormattingEnabled = true;
-            this.cmbView.Items.AddRange(new object[] {
-            "Courier Assignments By Day",
-            "Courier Assignments By Month",
-            "Contracted & Non-Contracted Clients",
-            "Value of Contracted & Non-Contracted Clients"});
-            this.cmbView.Location = new System.Drawing.Point(65, 94);
+            this.cmbView.Location = new System.Drawing.Point(61, 69);
             this.cmbView.Name = "cmbView";
-            this.cmbView.Size = new System.Drawing.Size(234, 28);
+            this.cmbView.Size = new System.Drawing.Size(401, 29);
             this.cmbView.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(331, 97);
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(8, 130);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 20);
+            this.label3.Size = new System.Drawing.Size(51, 21);
             this.label3.TabIndex = 4;
             this.label3.Text = "Time:";
             // 
             // btnSearch
             // 
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(701, 94);
+            this.btnSearch.BackColor = System.Drawing.Color.White;
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(701, 127);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(87, 28);
             this.btnSearch.TabIndex = 6;
             this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // dtpReportDay
             // 
-            this.dtpReportDay.Location = new System.Drawing.Point(384, 97);
+            this.dtpReportDay.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpReportDay.Location = new System.Drawing.Point(65, 127);
             this.dtpReportDay.Name = "dtpReportDay";
-            this.dtpReportDay.Size = new System.Drawing.Size(200, 20);
+            this.dtpReportDay.Size = new System.Drawing.Size(200, 29);
             this.dtpReportDay.TabIndex = 7;
             // 
             // FrmViewReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 493);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ClientSize = new System.Drawing.Size(800, 525);
             this.Controls.Add(this.dtpReportDay);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label3);

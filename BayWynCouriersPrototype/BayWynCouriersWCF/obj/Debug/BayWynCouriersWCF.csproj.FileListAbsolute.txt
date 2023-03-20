@@ -19,3 +19,10 @@ H:\University Work\Software Engineering\2Assignments\Assignment 2\BayWynRepo\Bay
 H:\University Work\Software Engineering\2Assignments\Assignment 2\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersWCF\obj\Debug\BayWynCouriersWCF.csproj.CoreCompileInputs.cache
 H:\University Work\Software Engineering\2Assignments\Assignment 2\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersWCF\obj\Debug\BayWynCouriersWCF.dll
 H:\University Work\Software Engineering\2Assignments\Assignment 2\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersWCF\obj\Debug\BayWynCouriersWCF.pdb
+H:\University Work\Software Engineering\2Assignments\Assignment 2\Repo\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersWCF\bin\BayWynCouriersWCF.dll.config
+H:\University Work\Software Engineering\2Assignments\Assignment 2\Repo\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersWCF\bin\BayWynCouriersWCF.dll
+H:\University Work\Software Engineering\2Assignments\Assignment 2\Repo\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersWCF\bin\BayWynCouriersWCF.pdb
+H:\University Work\Software Engineering\2Assignments\Assignment 2\Repo\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersWCF\obj\Debug\BayWynCouriersWCF.csproj.AssemblyReference.cache
+H:\University Work\Software Engineering\2Assignments\Assignment 2\Repo\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersWCF\obj\Debug\BayWynCouriersWCF.csproj.CoreCompileInputs.cache
+H:\University Work\Software Engineering\2Assignments\Assignment 2\Repo\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersWCF\obj\Debug\BayWynCouriersWCF.dll
+H:\University Work\Software Engineering\2Assignments\Assignment 2\Repo\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersWCF\obj\Debug\BayWynCouriersWCF.pdb

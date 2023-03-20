@@ -41,10 +41,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(171, 9);
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(150, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(261, 37);
+            this.label1.Size = new System.Drawing.Size(296, 42);
             this.label1.TabIndex = 0;
             this.label1.Text = "Accept Deliveries";
             // 
@@ -59,45 +60,48 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(36, 276);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 20);
+            this.label4.Size = new System.Drawing.Size(93, 21);
             this.label4.TabIndex = 10;
             this.label4.Text = "Choose ID:";
             // 
             // txtDelID
             // 
-            this.txtDelID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDelID.Location = new System.Drawing.Point(40, 299);
+            this.txtDelID.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDelID.Location = new System.Drawing.Point(40, 310);
             this.txtDelID.Name = "txtDelID";
-            this.txtDelID.Size = new System.Drawing.Size(100, 26);
+            this.txtDelID.Size = new System.Drawing.Size(100, 29);
             this.txtDelID.TabIndex = 9;
             // 
             // btnAccept
             // 
-            this.btnAccept.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccept.BackColor = System.Drawing.Color.White;
+            this.btnAccept.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAccept.Location = new System.Drawing.Point(421, 337);
             this.btnAccept.Name = "btnAccept";
             this.btnAccept.Size = new System.Drawing.Size(146, 34);
             this.btnAccept.TabIndex = 11;
             this.btnAccept.Text = "Accept Delivery";
-            this.btnAccept.UseVisualStyleBackColor = true;
+            this.btnAccept.UseVisualStyleBackColor = false;
             this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(189, 276);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 20);
+            this.label2.Size = new System.Drawing.Size(191, 21);
             this.label2.TabIndex = 12;
             this.label2.Text = "Enter delivering courier:";
             // 
             // cmdCourier
             // 
-            this.cmdCourier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdCourier.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdCourier.FormattingEnabled = true;
             this.cmdCourier.Items.AddRange(new object[] {
             "Adam Taylor",
@@ -110,16 +114,16 @@
             "Nathan Jones",
             "Robert Miller",
             "William Yates"});
-            this.cmdCourier.Location = new System.Drawing.Point(193, 297);
+            this.cmdCourier.Location = new System.Drawing.Point(193, 310);
             this.cmdCourier.Name = "cmdCourier";
-            this.cmdCourier.Size = new System.Drawing.Size(121, 28);
+            this.cmdCourier.Size = new System.Drawing.Size(121, 29);
             this.cmdCourier.TabIndex = 13;
             // 
             // FrmAcceptDeliveries
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(586, 383);
             this.Controls.Add(this.cmdCourier);
             this.Controls.Add(this.label2);

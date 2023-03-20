@@ -1,4 +1,5 @@
 ﻿using BayWynCouriersPrototype.Classes;
+using BayWynCouriersWCF;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +21,27 @@ namespace BayWynCouriersPrototype
 
         private void FrmViewReports_Load(object sender, EventArgs e)
         {
+            MessageBox.Show(FrmLogin.lvlAccess.ToString());
+
+            // If an owner is accessing the form.
+            if(FrmLogin.lvlAccess == 1)
+            {
+                // Display all items they can search by.
+                cmbView.Items.Add("Courier Assignments By Day");
+                cmbView.Items.Add("Courier Assignments By Month");
+                cmbView.Items.Add("Contracted & Non-Contracted Clients");
+                cmbView.Items.Add("Value of Contracted & Non-Contracted Clients");
+            }
+            // Else if it's an admin accessing the form.
+            else if (FrmLogin.lvlAccess == 2)
+            {
+                // Remove the items they cannot search by.
+                cmbView.Items.Remove("Courier Assignments By Day");
+                cmbView.Items.Remove("Courier Assignments By Month");
+                cmbView.Items.Add("Contracted & Non-Contracted Clients");
+                cmbView.Items.Add("Value of Contracted & Non-Contracted Clients");
+            }
+
             // Set the DateTimePicker's format to dd/mm/yyyy.
             dtpReportDay.Format = DateTimePickerFormat.Custom;
             dtpReportDay.CustomFormat = "dd/MM/yyyy";

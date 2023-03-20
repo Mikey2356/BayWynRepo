@@ -43,10 +43,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(171, 9);
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(160, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 37);
+            this.label1.Size = new System.Drawing.Size(242, 42);
             this.label1.TabIndex = 13;
             this.label1.Text = "View Couriers";
             // 
@@ -60,7 +62,7 @@
             // 
             // cmbStartBreak
             // 
-            this.cmbStartBreak.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbStartBreak.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbStartBreak.FormattingEnabled = true;
             this.cmbStartBreak.Items.AddRange(new object[] {
             "12:00",
@@ -68,34 +70,36 @@
             "12:30",
             "12:45",
             "13:00"});
-            this.cmbStartBreak.Location = new System.Drawing.Point(192, 282);
+            this.cmbStartBreak.Location = new System.Drawing.Point(204, 282);
             this.cmbStartBreak.Name = "cmbStartBreak";
-            this.cmbStartBreak.Size = new System.Drawing.Size(121, 28);
+            this.cmbStartBreak.Size = new System.Drawing.Size(121, 29);
             this.cmbStartBreak.TabIndex = 15;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(34, 285);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 20);
+            this.label2.Size = new System.Drawing.Size(164, 21);
             this.label2.TabIndex = 16;
             this.label2.Text = "Set start break time:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(39, 319);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 20);
+            this.label3.Size = new System.Drawing.Size(159, 21);
             this.label3.TabIndex = 18;
             this.label3.Text = "Set end break time:";
             // 
             // cmbEndBreak
             // 
-            this.cmbEndBreak.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEndBreak.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEndBreak.FormattingEnabled = true;
             this.cmbEndBreak.Items.AddRange(new object[] {
             "13:00",
@@ -103,37 +107,39 @@
             "13:30",
             "13:45",
             "14:00"});
-            this.cmbEndBreak.Location = new System.Drawing.Point(192, 316);
+            this.cmbEndBreak.Location = new System.Drawing.Point(204, 316);
             this.cmbEndBreak.Name = "cmbEndBreak";
-            this.cmbEndBreak.Size = new System.Drawing.Size(121, 28);
+            this.cmbEndBreak.Size = new System.Drawing.Size(121, 29);
             this.cmbEndBreak.TabIndex = 17;
             // 
             // btnSetBreak
             // 
-            this.btnSetBreak.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetBreak.Location = new System.Drawing.Point(375, 318);
+            this.btnSetBreak.BackColor = System.Drawing.Color.White;
+            this.btnSetBreak.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetBreak.Location = new System.Drawing.Point(370, 316);
             this.btnSetBreak.Name = "btnSetBreak";
-            this.btnSetBreak.Size = new System.Drawing.Size(132, 28);
+            this.btnSetBreak.Size = new System.Drawing.Size(137, 30);
             this.btnSetBreak.TabIndex = 19;
             this.btnSetBreak.Text = "Set break time";
-            this.btnSetBreak.UseVisualStyleBackColor = true;
+            this.btnSetBreak.UseVisualStyleBackColor = false;
             this.btnSetBreak.Click += new System.EventHandler(this.btnSetBreak_Click);
             // 
             // txtCourierID
             // 
-            this.txtCourierID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCourierID.Location = new System.Drawing.Point(192, 251);
+            this.txtCourierID.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCourierID.Location = new System.Drawing.Point(204, 251);
             this.txtCourierID.Name = "txtCourierID";
-            this.txtCourierID.Size = new System.Drawing.Size(100, 26);
+            this.txtCourierID.Size = new System.Drawing.Size(100, 29);
             this.txtCourierID.TabIndex = 20;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(58, 254);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 20);
+            this.label4.Size = new System.Drawing.Size(137, 21);
             this.label4.TabIndex = 21;
             this.label4.Text = "Enter Courier ID:";
             // 
@@ -141,7 +147,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(551, 358);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtCourierID);

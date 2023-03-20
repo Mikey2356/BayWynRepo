@@ -17,6 +17,25 @@ namespace BayWynCouriersPrototype
             InitializeComponent();
         }
 
+        private void FrmViewEditContract_Load(object sender, EventArgs e)
+        {
+            // If a logistics coordinator accesses the form.
+            if(FrmLogin.lvlAccess == 3)
+            {
+                // Disable the editing section of the form.
+                txtConID.Enabled= false;
+                txtBisName.Enabled= false;
+                txtAdd1.Enabled= false;
+                txtAdd2.Enabled= false;
+                txtEmail.Enabled= false;
+                txtConDel.Enabled= false;
+                txtNotes.Enabled= false;
+                txtPhoneNo.Enabled= false;
+                btnUpdate.Enabled= false;
+                btnDelete.Enabled= false;
+            }
+        }
+
         /// <summary>
         /// This method will be called when the search button is clicked.
         /// </summary>

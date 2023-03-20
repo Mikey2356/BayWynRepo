@@ -227,5 +227,11 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BayWynCouriersWCF\BayWynCouriersWCF.csproj">
+      <Project>{d61d3ff6-2b73-455e-b1b9-935f64b227d6}</Project>
+      <Name>BayWynCouriersWCF</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

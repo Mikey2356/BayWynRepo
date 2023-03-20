@@ -45,6 +45,42 @@ namespace BayWynCouriersWCF
                 case "Courier1" + "Cor123":
                     checker = 4;
                     break;
+
+                case "Courier2" + "Cor213":
+                    checker = 4;
+                    break;
+
+                case "Courier3" + "Cor321":
+                    checker = 4;
+                    break;
+
+                case "Courier4" + "CorPass":
+                    checker = 4;
+                    break;
+
+                case "Courier5" + "PassCor":
+                    checker = 4;
+                    break;
+
+                case "Courier6" + "231Cor":
+                    checker = 4;
+                    break;
+
+                case "Courier7" + "123Cor":
+                    checker = 4;
+                    break;
+
+                case "Courier8" + "987Cor":
+                    checker = 4;
+                    break;
+
+                case "Courier9" + "Cor23":
+                    checker = 4;
+                    break;
+
+                case "Courier10" + "Cor102":
+                    checker = 4;
+                    break;
             }
 
             return checker;
