@@ -65,6 +65,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Contracts.cs" />
+    <Compile Include="Classes\Assignments.cs" />
+    <Compile Include="Classes\Couriers.cs" />
+    <Compile Include="Classes\Reports.cs" />
     <Compile Include="DashFrms\FrmCancelDelivery.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,12 +84,6 @@
     </Compile>
     <Compile Include="DashFrms\FrmAcceptDeliveries.Designer.cs">
       <DependentUpon>FrmAcceptDeliveries.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DashFrms\FrmChangeDelivery.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DashFrms\FrmChangeDelivery.Designer.cs">
-      <DependentUpon>FrmChangeDelivery.cs</DependentUpon>
     </Compile>
     <Compile Include="DashFrms\FrmCreateContract.cs">
       <SubType>Form</SubType>
@@ -120,11 +117,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DashFrms\FrmSetBreakTime.cs">
+    <Compile Include="DashFrms\FrmViewCouriers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DashFrms\FrmSetBreakTime.Designer.cs">
-      <DependentUpon>FrmSetBreakTime.cs</DependentUpon>
+    <Compile Include="DashFrms\FrmViewCouriers.Designer.cs">
+      <DependentUpon>FrmViewCouriers.cs</DependentUpon>
     </Compile>
     <Compile Include="DashFrms\FrmViewReports.cs">
       <SubType>Form</SubType>
@@ -132,11 +129,26 @@
     <Compile Include="DashFrms\FrmViewReports.Designer.cs">
       <DependentUpon>FrmViewReports.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DashFrms\FrmAcceptDeliveries.resx">
+      <DependentUpon>FrmAcceptDeliveries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashFrms\FrmCancelDelivery.resx">
+      <DependentUpon>FrmCancelDelivery.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DashFrms\FrmCreateContract.resx">
       <DependentUpon>FrmCreateContract.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DashFrms\FrmViewCouriers.resx">
+      <DependentUpon>FrmViewCouriers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashFrms\FrmSetDeliveryTime.resx">
+      <DependentUpon>FrmSetDeliveryTime.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DashFrms\FrmViewEditContract.resx">
       <DependentUpon>FrmViewEditContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashFrms\FrmViewReports.resx">
+      <DependentUpon>FrmViewReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StartingFrms\FrmDash.resx">
       <DependentUpon>FrmDash.cs</DependentUpon>
@@ -214,6 +226,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BayWynCouriersWCF\BayWynCouriersWCF.csproj">
+      <Project>{d61d3ff6-2b73-455e-b1b9-935f64b227d6}</Project>
+      <Name>BayWynCouriersWCF</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
