@@ -49,12 +49,12 @@ namespace BayWynCouriersPrototype
             Regex regx = new Regex("^[0-9]*$");
 
             // Check if any of the text boxes are null.
-            if(txtBisName == null || txtAdd1 == null || txtAdd2 == null || txtPhoneNo == null || txtEmail == null) 
+            if(txtBisName.Text == "" || txtAdd1.Text == "" || txtAdd2.Text == "" || txtPhoneNo.Text == "" || txtEmail.Text == "") 
             { 
                 // If they are, return a message box.
                MessageBox.Show("Please fill out all required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if(regx.IsMatch(txtPhoneNo.Text))
+            else if(!regx.IsMatch(txtPhoneNo.Text))
             {
                 MessageBox.Show("Please use only numbers in the phone number field.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
