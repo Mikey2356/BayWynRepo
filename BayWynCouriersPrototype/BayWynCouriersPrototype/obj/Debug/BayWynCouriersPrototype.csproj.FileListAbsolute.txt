@@ -110,7 +110,3 @@ H:\University Work\Software Engineering\2Assignments\Assignment 2\Repo\BayWynRep
 H:\University Work\Software Engineering\2Assignments\Assignment 2\Repo\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersPrototype\bin\Debug\BayWynCouriersWCF.pdb
 H:\University Work\Software Engineering\2Assignments\Assignment 2\Repo\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersPrototype\bin\Debug\BayWynCouriersWCF.dll.config
 H:\University Work\Software Engineering\2Assignments\Assignment 2\Repo\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersPrototype\obj\Debug\BayWynCouriersPrototype.csproj.CopyComplete
-D:\University Work\Software Engineering\2Assignments\Assignment 2\Repo\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersPrototype\bin\Debug\BayWynCouriersWCF.dll
-D:\University Work\Software Engineering\2Assignments\Assignment 2\Repo\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersPrototype\bin\Debug\BayWynCouriersWCF.pdb
-D:\University Work\Software Engineering\2Assignments\Assignment 2\Repo\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersPrototype\bin\Debug\BayWynCouriersWCF.dll.config
-D:\University Work\Software Engineering\2Assignments\Assignment 2\Repo\BayWynRepo\BayWynCouriersPrototype\BayWynCouriersPrototype\obj\Debug\BayWynCouriersPrototype.csproj.CopyComplete
