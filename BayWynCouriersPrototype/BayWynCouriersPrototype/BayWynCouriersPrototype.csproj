@@ -117,9 +117,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< Updated upstream
     <Compile Include="DashFrms\FrmViewCouriers.cs">
       <SubType>Form</SubType>
     </Compile>
+=======
+    <Compile Include="DashFrms\FrmViewCouriers.cs" />
+>>>>>>> Stashed changes
     <Compile Include="DashFrms\FrmViewCouriers.Designer.cs">
       <DependentUpon>FrmViewCouriers.cs</DependentUpon>
     </Compile>
